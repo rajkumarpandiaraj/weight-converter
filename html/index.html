@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="../css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/weight.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weightConverter</title>
+</head>
+<body>
+    <div class="container">
+        <h1>weight Converter</h1>
+        <form action="">
+            <input type="number" class="input-num" id="input-number" placeholder="Enter Pounds...">
+            <!--div class="up-down">
+                <i class="fas fa-angle-up" id="angle-up"></i>
+                <i class="fas fa-angle-down" id="angle-down"></i>
+            </div-->
+            
+        </form>
+
+        <div id="output">
+            <div id="grams">
+                <h4>Grams:</h4>
+                <div id="gramsOutput"></div>
+            </div>
+
+            <div id="kgrams">
+                <h4>Kilograms:</h4>
+                <div id="kgOutput"></div>
+            </div>
+
+            <div id="ounces">
+                <h4>Ounces:</h4>
+                <div id="ozOutput"></div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        const inputNumber = document.getElementById('input-number');
+
+        document.getElementById('output').style.visibility = 'hidden';
+
+        inputNumber.addEventListener('input', function(e){
+            document.getElementById('output').style.visibility = 'visible';
+
+            let lbs = e.target.value;
+            //console.log(inputValue);
+            document.getElementById('gramsOutput').innerHTML = lbs/0.0022046;
+            document.getElementById('kgOutput').innerHTML = lbs/2.2046;
+            document.getElementById('ozOutput').innerHTML = lbs*16;
+
+         })
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
